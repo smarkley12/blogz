@@ -53,8 +53,6 @@ def addentry():
             db.session.commit()
             blogpost_link = "/?id=" + str(new_post.id)
             return redirect(blogpost_link)
-          #  return render_template('blogpost.html', title="Entry Added!",
-          #  blog_post=blog_post, blog_title=blog_title)
 
         return render_template('addentry.html', title='Nothing Posted', 
             title_error=title_error, blog_entry_error=blog_entry_error,
