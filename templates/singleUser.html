@@ -3,9 +3,11 @@
 {% block content %}
     <h1>blog posts!</h1>
 
-
-
-    <h2><a href="/blog?id=5946529592377344">hello</a></h2>
-    <p>newpost</p>
-    <p class="post-author">written by <a href="/blog?user=jacob">jacob</a></p>   
+    <div>
+        {% for entry in blog_entries %}
+        <p><a href="/single_blog_post?id={{entry.id}}">{{entry.title}}</a></p>
+        <p>{{entry.body}}</p>
+        <small>written by: {{entry.owner.username}}</small>
+        {% endfor %}
+    </div>   
 {% endblock %}

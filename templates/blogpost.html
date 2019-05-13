@@ -4,4 +4,6 @@
     <br><br>
     <h1>{{single_post.title}}</h1>
     <p>{{single_post.body}}</p>
+    <a href="/blog?user={{single_post.owner_id}}">
+    <small>written by: {{single_post.owner.username}}</small>
 {% endblock %}
